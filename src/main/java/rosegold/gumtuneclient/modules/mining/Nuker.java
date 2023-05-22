@@ -422,6 +422,11 @@ public class Nuker {
         if (NukerBlockFilter.nukerBlockFilterSand &&
                 (block == Blocks.sand || block == Blocks.gravel)) return true;
 
+
+        if (NukerBlockFilter.nukerBlockFilterEndStone &&
+                (block == Blocks.end_stone)) return true;
+
+
         if (NukerBlockFilter.nukerBlockFilterDirt &&
                 (block == Blocks.dirt ||
                 block == Blocks.grass ||

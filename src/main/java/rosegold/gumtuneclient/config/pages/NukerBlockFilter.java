@@ -83,6 +83,12 @@ public class NukerBlockFilter {
     public static boolean nukerBlockFilterSand = false;
 
     @Switch(
+            name = "Endstone",
+            description = "Mines Endstone"
+    )
+    public static boolean nukerBlockFilterEndStone = false;
+
+    @Switch(
             name = "Dirt",
             description = "Dirt, farmland and grass"
     )

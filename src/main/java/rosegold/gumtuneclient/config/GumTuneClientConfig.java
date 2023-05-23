@@ -590,60 +590,52 @@ public class GumTuneClientConfig extends Config {
     @Info(
             text = "Remember to toggle both Mob Macro and it's keybind!",
             type = InfoType.INFO,
-            category = MACRO,
-            subcategory = MOB_MACRO
+            category = MOB_MACRO
     )
     public static boolean mobMacroReminderIgnored;
 
     @Switch(
             name = "Mob Macro",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             size = 2
     )
     public static boolean mobMacro = false;
 
     @KeyBind(
             name = "Toggle Keybind",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             size = 2
     )
     public static OneKeyBind mobMacroKeyBind = new OneKeyBind(UKeyboard.KEY_NONE);
 
     @Slider(
             name = "Delay in Ticks",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             min = 1, max = 40
     )
     public static int mobMacroDelay = 5;
 
     @Switch(
             name = "Walk",
-            category = MACRO,
-            subcategory = MOB_MACRO
+            category = MOB_MACRO
     )
     public static boolean mobMacroWalk = false;
 
     @Switch(
             name = "Jump",
-            category = MACRO,
-            subcategory = MOB_MACRO
+            category = MOB_MACRO
     )
     public static boolean mobMacroJump = false;
 
     @Switch(
             name = "Smart Sprint",
-            category = MACRO,
-            subcategory = MOB_MACRO
+            category = MOB_MACRO
     )
     public static boolean mobMacroSmartSprint = false;
 
     @Switch(
             name = "Entity Lock",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             description = "Once targeted an entity, will not change to a different entity until it is defeated or becomes impossible to defeat"
     )
     public static boolean mobMacroEntityLock = false;
@@ -651,24 +643,21 @@ public class GumTuneClientConfig extends Config {
     @Page(
             name = "Mobs Filters",
             description = "Select mobs to kill with macro",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             location = PageLocation.TOP
     )
     public MobMacroFilter mobMacroFilter = new MobMacroFilter();
 
     @Dropdown(
             name = "Rotation Type",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             options = {"Instant", "Server Side", "Smooth"}
     )
     public static int mobMacroRotation = 0;
 
     @Dropdown(
             name = "Attack Type",
-            category = MACRO,
-            subcategory = MOB_MACRO,
+            category = MOB_MACRO,
             options = {"Precursor Eye", "Frozen Scythe (and similar items)", "Left Click"}
     )
     public static int mobMacroAttackType = 0;

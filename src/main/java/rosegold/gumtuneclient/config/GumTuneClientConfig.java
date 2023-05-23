@@ -1194,6 +1194,22 @@ public class GumTuneClientConfig extends Config {
     public static boolean antiShy = false;
 
     @Switch(
+            name = "Level",
+            description = "Enable to have Level based Mob-Macro ",
+            category = MOB_MACRO
+    )
+    public static boolean lvlFilterBool = false;
+
+
+    @Slider(
+            name = "Level of Mob to Attack",
+            category = MOB_MACRO,
+            min = 0, max = 100
+    )
+    public static int lvl_Filter = 0;
+
+
+    @Switch(
             name = "Trackers",
             category = TRACKERS,
             size = 2

@@ -42,6 +42,8 @@ public class MobMacro {
     private int stuckTicks = 0;
     private Entity lookAt;
 
+    public int lvl_Filter = GumTuneClientConfig.lvl_Filter;
+
     @SubscribeEvent
     public void onKey(InputEvent.KeyInputEvent event) {
         if (Keyboard.getEventKeyState() || !LocationUtils.onSkyblock || !GumTuneClientConfig.mobMacro) return;
@@ -91,6 +93,9 @@ public class MobMacro {
 
         for (Entity entity : ignoreEntities) {
             if (entity != null) {
+                RenderUtils.renderBoundingBox(entity, event.partialTicks, Color.BLUE.getRGB());
+            }
+            if (entity.getCustomNameTag().contains("["+ lvl_Filter +"]") ){
                 RenderUtils.renderBoundingBox(entity, event.partialTicks, Color.BLUE.getRGB());
             }
         }

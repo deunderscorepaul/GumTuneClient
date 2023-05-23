@@ -25,6 +25,9 @@ public class RevealHiddenMobs {
         if (RevealHiddenMobsFilter.sneakyCreepers && event.entity instanceof EntityCreeper && LocationUtils.currentIsland == LocationUtils.Island.DEEP_CAVERNS) {
             event.entity.setInvisible(false);
         }
+        if(RevealHiddenMobsFilter.ghost && event.entity instanceof EntityCreeper && LocationUtils.currentIsland == LocationUtils.Island.DWARVEN_MINES){
+            event.entity.setInvisible(false);
+        }
 
         checked.add(event.entity);
     }
